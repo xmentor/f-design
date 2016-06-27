@@ -319,16 +319,10 @@ body {
   height: 250px;
   font-size: 1.3em;
 }
-.content-page.contact .form-contact .contact-message::-webkit-input-placeholder {
-  color: #a0a0a0;
-}
-.content-page.contact .form-contact .contact-message:-moz-placeholder {
-  color: #a0a0a0;
-}
-.content-page.contact .form-contact .contact-message::-moz-placeholder {
-  color: #a0a0a0;
-}
-.content-page.contact .form-contact .contact-message:-ms-input-placeholder {
+.content-page.contact .form-contact .contact-message::-webkit-input-placeholder,
+.content-page.contact .form-contact .contact-message:-moz-placeholder,
+.content-page.contact .form-contact .contact-message::-moz-placeholder,
+.content-page.contact .form-contact .contact-message:-ms-input-placeholder{
   color: #a0a0a0;
 }
 .content-page.contact .form-contact .send-button {

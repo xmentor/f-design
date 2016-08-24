@@ -9,19 +9,28 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/fontello.css">
 		<link rel="stylesheet" href="css/style.css">
-		<!--<link rel="stylesheet/less" href="css/style.less">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>-->
+<!--		<link rel="stylesheet/less" href="css/style.less">-->
+<!--		<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>-->
     </head>
     <body>
+        <a href="#main" class="visuallyhidden focus">Przejdź do treści</a>
         <header id="header-page" class="header-page">
             <h1 class="logo">Logo</h1>
             <nav class="nav">
                 <h2 class="visuallyhidden">Navigation</h2>
                 <ul class="nav-list">
-                    <li><a href="#header-page" title="Go to the main page">Start</a></li>
-                    <li><a href="#about-me" title="About me">About me</a></li>
-                    <li><a href="#portfolio" title="My work">Work</a></li>
-                    <li><a href="#contact" title="Contact with me">Contact</a></li>
+                    <li>
+                        <a href="#header-page">Start</a>
+                    </li>
+                    <li>
+                        <a href="#about-me">About me</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Work</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
                 </ul>
             </nav>
             <div class="slogan">
@@ -30,7 +39,7 @@
             </div>
             <a href="#main" class="anchor" title="Go to the main content">GO AHEAD</a>
         </header>
-        <main class="main-content" id="main">
+        <main class="main-content" id="main" tabindex="-1">
             <article class="content-page about-me" id="about-me">
                 <h2 class="title">RAPHAEL LENCHER.</h2>
                 <div class="content">
@@ -40,21 +49,21 @@
             <article class="content-page work-flow">
                 <h2 class="visuallyhidden">Work flow</h2>
                 <section class="content-article">
-                    <img src="img/Icon.png" alt="Sketching is fun">
+                    <img src="img/Icon.png" alt="">
                     <h3 class="title">Sketching is fun</h3>
                     <div class="content">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                     </div>
                 </section>
                 <section class="content-article">
-                    <img src="img/Icon2.png" alt="Desing afterwards">
+                    <img src="img/Icon2.png" alt="">
                     <h3 class="title">Desing afterwards</h3>
                     <div class="content">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                     </div>
                 </section>
                 <section class="content-article">
-                    <img src="img/Icon3.png" alt="Finalize">
+                    <img src="img/Icon3.png" alt="">
                     <h3 class="title">Finalize</h3>
                     <div class="content">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -66,22 +75,22 @@
                 <ul class="works">
                     <li>
                          <a href="#" title="Lorem ipsum dolor sit amet" class="img-description">
-                            <img class="responsive" src="img/Photo-by-Daniel-Chodusov.png" alt="Photo by Daniel Chodusov">
+                            <img class="responsive" src="img/Photo-by-Daniel-Chodusov.png" alt="Photo by Daniel Chodusov - demo">
                         </a>
                     </li>                    
                     <li>
                          <a href="#" title="Lorem ipsum dolor sit amet" class="img-description">
-                            <img class="responsive" src="img/Photo-by-mars_.png" alt="Photo by Mars">
+                            <img class="responsive" src="img/Photo-by-mars_.png" alt="Photo by Mars - demo">
                         </a>
                     </li>                    
                     <li>
                          <a href="#" title="Lorem ipsum dolor sit amet" class="img-description">
-                            <img class="responsive" src="img/Photo-by-Daniel-Chodusovv.png" alt="Photo by Daniel Chodusov">
+                            <img class="responsive" src="img/Photo-by-Daniel-Chodusovv.png" alt="Photo by Daniel Chodusov - demo">
                         </a>
                     </li>
                     <li>
                          <a href="#" title="Lorem ipsum dolor sit amet" class="img-description">
-                            <img class="responsive" src="img/Photo-by-Daniel-Chodusova.png" alt="Photo by Daniel Chodusov">
+                            <img class="responsive" src="img/Photo-by-Daniel-Chodusova.png" alt="Photo by Daniel Chodusov - demo">
                         </a>
                     </li>             
                 </ul>
@@ -91,20 +100,39 @@
             <article class="content-page contact" id="contact">
                 <h2 class="title">Get in touch!</h2>
                 <form action="#" method="post" class="form-contact">
-                    <input class="contact-name" name="name" placeholder="Name">
-                    <input class="contact-email" name="email" placeholder="Email">
-                    <textarea class="contact-message" name="message" placeholder="How can I help you?"></textarea>
+                    <label class="visuallyhidden" for="name">Name*:</label>
+                    <input class="contact-name" id="name" placeholder="Name" required>
+                    <label class="visuallyhidden" for="email">E-mail*:</label>
+                    <input class="contact-email" id="email" placeholder="Email" type="email" required>
+                    <label class="visuallyhidden" for="Message">Message*:</label>
+                    <textarea class="contact-message" id="message" placeholder="How can I help you?" required></textarea>
                     <input class="send-button" type="submit" value="Send">
                 </form> 
             </article>
         </main>
         <footer class="footer-page">
             <div class="social-media">
-                <div class="icon"><a href="#" title="Visit my profil on Twitter"><em class="icon-t"></em></a></div> <!--Twitter-->
-                <div class="icon"><a href="#" title="Visit my profil on Dribbble"><em class="icon-d"></em></a></div> <!--Dribbble-->
-                <div class="icon"><a href="#" title="Visit my profil on Facebook"><em class="icon-f"></em></a></div> <!--Facebook-->
+                <div class="icon">
+                    <a href="#" class="icon_link">
+                        <i class="icon-t" title="Visit my profil on Twitter" aria-hidden="true"></i>
+                        <span class="visuallyhidden">Visit my profil on Twitter</span>
+                    </a>
+                </div>
+                <div class="icon">
+                    <a href="#" class="icon_link">
+                        <i class="icon-d" title="Visit my profil on Dribbble" aria-hidden="true"></i>
+                        <span class="visuallyhidden">Visit my profil on Dribbble</span>
+                    </a>
+                </div> 
+                <div class="icon">
+                    <a href="#" class="icon_link">
+                        <i class="icon-f" title="Visit my profil on Facebook" aria-hidden="true"></i>
+                        <span class="visuallyhidden">Visit my profil on Facebook</span>
+                    </a>
+                </div> 
             </div>
             <span class="copyright">&copy; Raphael Lechner 2016</span>
         </footer>
+        <link href='https://fonts.googleapis.com/css?family=Rokkitt|Quicksand:400,300,700' rel='stylesheet'>
     </body>
 </html>    

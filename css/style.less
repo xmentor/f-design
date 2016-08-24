@@ -1,31 +1,22 @@
-@import url(https://fonts.googleapis.com/css?family=Rokkitt|Quicksand:400,300,700);
 .transition(@transition)
 {
     -webkit-transition:@transition;
-    -moz-transition:@transition;
-    -ms-transition:@transition;
-    -o-transition:@transition;
     transition:@transition;
 }
 .transform(@transform)
 {
     -webkit-transform:@transform;
-    -moz-transform:@transform;
-    -ms-transform:@transform;
-    -o-transform:@transform;
     transform:@transform;
 }
 @pom:rgb(231,76,60);
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 body{
     font-size: 1.000em;
-    font-family: Quicksand, Arial, sans-serif;
+    font-family: Quicksand, Verdana, Arial, sans-serif;
 }
 .visuallyhidden{
     border: 0; 
@@ -36,6 +27,18 @@ body{
     padding: 0; 
     position: absolute;
     width: 1px;
+}
+.focus{
+    color: #fff;
+    z-index: 9999;
+    text-decoration: underline;
+    outline: 1px dotted #fff;
+    &:focus{
+        clip: auto;
+        width: auto;
+        height: auto;
+        margin: 20px;
+    }
 }
 .header-page{
     display: flex;
@@ -62,10 +65,13 @@ body{
             font-size: 1.199em;
             a{
                 .transition(color .2s linear);
-                &:hover{
+                &:hover,
+                &:focus{
                     color:@pom;
                     text-shadow: 0 0 2px #666;
                     .transition(color .2s linear);
+                    outline-color: #fff;
+                    outline-offset: 3px;
                 }  
             }
                 
@@ -113,7 +119,8 @@ body{
         outline: 4px solid rgba(231,76,60,.5);
         font-size:1.03em;
         .transition(transform .2s ease-out);
-        &:hover{
+        &:hover,
+        &:focus{
             .transform(scale(.95));
             .transition(transform .2s ease-in);
         }
@@ -210,7 +217,8 @@ body{
                         border-top:5px solid rgb(191,66,60);
                         .transition(opacity .3s ease-out);
                     }
-                    &:hover{
+                    &:hover,
+                    &:focus{
                         opacity: 1;
                         .transition(opacity .3s ease-in); 
                         &:before{
@@ -233,7 +241,8 @@ body{
             color:#fff;
             outline: 4px solid rgba(231,76,60,.5);
             .transition(transform .2s ease-out);
-            &:hover{
+            &:hover,
+            &:focus{
                 cursor: pointer;
                 .transform(scale(.95));
                 .transition(transform .2s ease-in);
@@ -250,7 +259,7 @@ body{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: flex-start;
             .contact-name,
             .contact-email{
                 width:369px;
@@ -261,19 +270,27 @@ body{
                 color:#666;
                 font: inherit;
                 font-size: 1.4em;
+                outline: 1px solid #fff;
+                .transition(outline-color .2s ease-in-out);
                 &::-webkit-input-placeholder{
-                    color: rgb(160,160,160);
+                    color: rgb(145,145,145);
                 }
                 &:-moz-placeholder{
-                    color: rgb(160,160,160);
+                    color: rgb(145,145,145);
                 }
                 &::-moz-placeholder{
-                    color: rgb(160,160,160);
+                    color: rgb(145,145,145);
                 }
                 &:-ms-input-placeholder{
-                    color: rgb(160,160,160);
+                    color: rgb(145,145,145);
                 }
-             
+                &:hover,
+                &:focus{
+                    outline-color: @pom;
+                }
+            }
+            .contact-name{
+                margin-right: 22px;
             }
             .contact-message{
                 .contact-email;
@@ -292,7 +309,8 @@ body{
                 margin: 0 auto;
                 font:inherit;
                 .transition(transform .2s ease-out);
-                &:hover{
+                &:hover,
+                &:focus{
                     cursor: pointer;
                     .transform(scale(.95));
                     .transition(transform .2s ease-in);
@@ -310,18 +328,27 @@ body{
         display: flex;
         justify-content: center;
         .icon{
-            color: @pom;
             flex:1;
             text-align: center;
+            color: #fff;
+            .icon_link{
+                display: table;
+                margin: 0 auto;
+                .transition(transform .2s ease-in-out);
+                &:hover,
+                &:focus{
+                    .transform(scale(1.13));
+                }
+            }
             .icon-f,
             .icon-t,
             .icon-d{
+                color: @pom;
                 background-color: #ffffff;
                 outline: 4px solid rgba(231,76,60,.5);
                 padding: 10px;
                 font-size: 3em;
             }
-            background: url(images/Logo.png);
         }
     }
     .copyright{
